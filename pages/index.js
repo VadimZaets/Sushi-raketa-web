@@ -1,3 +1,5 @@
+import MainView from "../src/pages/MainView/MainView";
+
 export default function Home() {
-  return <div></div>;
+  return <MainView />;
 }
