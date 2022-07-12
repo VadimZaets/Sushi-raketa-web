@@ -11,6 +11,7 @@ import styles from "./sass/Carousel.module.scss";
 
 // import required modules
 import { Pagination, Autoplay } from "swiper";
+import Layout from "../../layout/layout";
 
 const images = [
   { id: 1, src: "philadelphia.png", alt: "philadelphia" },
@@ -19,7 +20,7 @@ const images = [
 
 export default function Carousel() {
   return (
-    <>
+    <Layout>
       <Swiper
         pagination={true}
         modules={[Pagination, Autoplay]}
@@ -38,6 +39,6 @@ export default function Carousel() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </Layout>
   );
 }

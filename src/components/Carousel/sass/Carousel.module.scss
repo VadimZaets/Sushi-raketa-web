@@ -4,9 +4,9 @@
 	height: 50vh;
 	width: calc(90vw - 40px);
 	max-height: 506px;
-	max-width: 1320px;
+	max-width: 1120px;
 	border-radius: 25px;
-
+	height: 240px;
 }
 
 
@@ -47,9 +47,10 @@
 	z-index: 2;
 	background-color: #fff;
 	opacity: 0.8;
-	max-width: 250px;
 	min-width: 220px;
-	color: orange;
+	max-width: 250px;
+	
+	color: #fb8500;
 	border: none;
 	height: 50px;
 	font-family: Open Sans, sans-serif;

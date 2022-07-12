@@ -1,11 +1,14 @@
 import Carousel from "../../components/Carousel/Carousel";
-import Header from "../../components/Header/Header";
+
+import Heading from "../../components/Heading/Heading";
+import ProductCards from "../../components/ProductCard/ProductCard";
 
 const MainView = () => {
   return (
     <>
-      <Header />
       <Carousel />
+      <Heading text="Пропозиції тижня :" />
+      <ProductCards />
     </>
   );
 };

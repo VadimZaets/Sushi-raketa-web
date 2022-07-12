@@ -1,0 +1,19 @@
+.heading{
+	margin-top: 30px;
+	font-family: Rubik;
+	font-size: 18px;
+	line-height: 0.7;
+	font-weight: 500;
+	@media screen and (min-width: 768px) {
+			margin-top: 50px;
+		}
+	
+		@media screen and (min-width: 992px) {
+			
+			margin-top: 60px;
+			font-size: 32px;
+			line-height: 0.7;
+		}
+	
+		
+}
