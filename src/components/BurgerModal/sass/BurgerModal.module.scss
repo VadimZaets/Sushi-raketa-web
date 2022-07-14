@@ -1,0 +1,38 @@
+.closeBtn {
+	margin-top: 40px;
+	margin-left: 25px;
+	color: #fb8500;
+	width: 24px;
+	height: 24px;
+	border: none;
+	background-color: white;
+}
+
+.burger_links {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+.burger_link {
+	padding: 0 10px;
+	
+   width: 100%;
+	text-align: center;
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 1.5;
+	
+		&:hover {
+			color: #fb8500;
+			
+		
+		}
+	&:not(:last-child) {
+
+		margin-bottom: 20px;
+	}
+}

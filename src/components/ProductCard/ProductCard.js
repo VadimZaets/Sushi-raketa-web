@@ -15,7 +15,7 @@ const product = [
     path: "/sushi",
   },
   {
-    id: 1,
+    id: 2,
     img: "philadelphia.png",
     weight: "1000",
     number: "32",

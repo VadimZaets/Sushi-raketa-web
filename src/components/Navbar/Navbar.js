@@ -4,26 +4,35 @@ import Image from "next/image";
 import { useRouter, useState } from "next/router";
 import { GiHamburgerMenu } from "react-icons/gi";
 import styles from "./sass/Navbar.module.scss";
-import { BsFillBasket3Fill } from "react-icons/bs";
-
+import { BiShoppingBag } from "react-icons/bi";
+import { CgProfile } from "react-icons/cg";
+import BurgerModal from "../BurgerModal/BurgerModal";
 const navigation = [
-  { id: 1, title: "Роли", path: "/sushi" },
-  { id: 2, title: "Сети", path: "/sets" },
-  { id: 3, title: "Піца", path: "/pizza" },
+  { id: 1, title: "Роли", path: "/menu/sushi" },
+  { id: 2, title: "Сети", path: "/menu/sets" },
+  { id: 3, title: "Піца", path: "/menu/pizza" },
 ];
 
 const Navbar = () => {
-  const [open, setOpen] = React.useState(false);
+  const [modalOpen, setModalOpen] = React.useState(false);
+  // console.log(modalOpen);
+  const onModalOpen = () => {
+    setModalOpen(true);
+  };
+
+  const onModalClose = (e) => {
+    setModalOpen(false);
+  };
   const { pathname } = useRouter();
-  function handleClick() {
-    setOpen(!open);
-  }
 
   return (
     <nav className={styles.nav}>
-      <button>
+      <button className={styles.burger} onClick={onModalOpen}>
         <GiHamburgerMenu style={{ width: "18px", height: "18px" }} />
       </button>
+      {modalOpen && (
+        <BurgerModal modalOpen={modalOpen} modalClose={onModalClose} />
+      )}
       <div className={styles.logo__container}>
         <Image
           src="/logo.png"
@@ -43,14 +52,17 @@ const Navbar = () => {
         ))}
       </div>
       <div>
-        <button className={styles.basket}>
-          <BsFillBasket3Fill className={styles.basket_img} />
-          Замовити
-        </button>
-        <button className={styles.basket__mobile}>
-          <BsFillBasket3Fill className={styles.basket_img} />
-        </button>
-        <button className={styles.singin}>Увійти</button>
+        <Link href="">
+          <a className={styles.cart}>
+            <BiShoppingBag />
+          </a>
+        </Link>
+        <Link href="">
+          <a className={styles.singin}>
+            <CgProfile className={styles.singin_img} />
+            Увійти
+          </a>
+        </Link>
       </div>
     </nav>
   );
