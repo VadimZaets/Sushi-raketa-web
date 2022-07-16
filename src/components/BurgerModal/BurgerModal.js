@@ -7,7 +7,7 @@ import styles from "./sass/BurgerModal.module.scss";
 export default function BurgerModal({ modalOpen, modalClose, children }) {
   const [open, setOpen] = React.useState(false);
   const navigation = [
-    { id: 1, title: "Роли", path: "/menu/sushi" },
+    { id: 1, title: "Роли", path: "/menu/rolls" },
     { id: 2, title: "Сети", path: "/menu/sets" },
     { id: 3, title: "Піца", path: "/menu/pizza" },
   ];
@@ -39,7 +39,9 @@ export default function BurgerModal({ modalOpen, modalClose, children }) {
           <div className={styles.burger_links}>
             {navigation.map(({ id, title, path }) => (
               <Link key={id} href={path}>
-                <a className={styles.burger_link}>{title}</a>
+                <a className={styles.burger_link} onClick={handleClose}>
+                  {title}
+                </a>
               </Link>
             ))}
           </div>

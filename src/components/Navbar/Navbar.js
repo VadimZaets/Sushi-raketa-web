@@ -8,7 +8,7 @@ import { BiShoppingBag } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import BurgerModal from "../BurgerModal/BurgerModal";
 const navigation = [
-  { id: 1, title: "Роли", path: "/menu/sushi" },
+  { id: 1, title: "Роли", path: "/menu/rolls" },
   { id: 2, title: "Сети", path: "/menu/sets" },
   { id: 3, title: "Піца", path: "/menu/pizza" },
 ];
@@ -33,7 +33,7 @@ const Navbar = () => {
       {modalOpen && (
         <BurgerModal modalOpen={modalOpen} modalClose={onModalClose} />
       )}
-      <div className={styles.logo__container}>
+      <div className={styles.logo_container}>
         <Image
           src="/logo.png"
           width={60}
@@ -41,7 +41,11 @@ const Navbar = () => {
           alt="logo"
           className={styles.logo}
         />
-        <p className={styles.logo__name}>Sushi-raketa</p>
+        <Link href="/">
+          <a className={styles.logo_name}>
+            <span className={styles.logo_color}>Sushi</span>Raketa
+          </a>
+        </Link>
       </div>
 
       <div className={styles.links}>
