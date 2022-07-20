@@ -1,0 +1,90 @@
+.wrapper {
+	display: block;
+	margin: 0 auto;
+	padding: 40px 20px;
+	margin-bottom: 34px;
+	margin-top: 24px;
+	width: 280px;
+	font-size: 10px;
+	// background-color:var(--second-bg-color);
+	// background: linear-gradient(0deg,
+	// 		rgba(4, 115, 116, 1) 0%,
+	// 		rgba(85, 136, 143, 1) 46%,
+	// 		rgba(4, 115, 116, 1) 100%);
+	border: 1px solid #ececec;
+	box-shadow: 2px 8px 16px hsl(236deg 6% 49% / 30%);
+	box-sizing: border-box;
+	border-radius: 25px;
+
+	@media screen and (min-width: 768px) {
+		padding: 60px 32px 48px 32px;
+		margin-bottom: 48px;
+		width: 501px;
+	}
+
+	@media screen and (min-width: 1280px) {
+		margin-bottom: 100px;
+		margin-top: 170px;
+		
+	}
+
+	input {
+		border: 1px solid #ececec;
+		background: white;
+		width: 200px;
+	}
+}
+
+.authForm{
+		display: flex;
+			flex-direction: column;
+			align-items: center;
+}
+
+.authFormTitle {
+	font-family: Rubik;
+	margin-bottom: 32px;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 500;
+
+	@media screen and (min-width: 768px) {
+		font-size: 14px;
+	}
+}
+
+.btn {
+	display: flex;
+	justify-content: space-between;
+}
+
+.btnSubmit {
+	width: 109px;
+	height: 60px;
+
+	@media screen and (min-width: 768px) {
+		width: 210px;
+		// height: 60px;
+	}
+}
+
+.btnSubmit:hover {
+	background-color: var(--accent-button-color);
+}
+
+.btnGoogle {
+	margin-bottom: 32px;
+	margin-top: 32px;
+}
+
+.authFormInput {
+	margin-top: 32px;
+}
+
+.img {
+	margin-right: 10px;
+}
+
+.btnSubmitSignin {
+	margin-right: 10px;
+}

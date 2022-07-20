@@ -10,6 +10,7 @@ export default function BurgerModal({ modalOpen, modalClose, children }) {
     { id: 1, title: "Роли", path: "/menu/rolls" },
     { id: 2, title: "Сети", path: "/menu/sets" },
     { id: 3, title: "Піца", path: "/menu/pizza" },
+    { id: 4, title: "Бургери", path: "/menu/burger" },
   ];
   const handleClose = () => {
     setOpen(false);

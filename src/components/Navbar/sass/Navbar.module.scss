@@ -7,7 +7,7 @@
 
 // ============== burger =============
 .burger{
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: 1120px) {
 		display: none;
 	}
 	
@@ -23,7 +23,7 @@
 	
 // ==================  Link ===============
 	.link {
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width: 1120px) {
 			display: none;
 		}
 

@@ -17,8 +17,10 @@
 
 .burger_link {
 	padding: 0 10px;
-	
-   width: 100%;
+	background-color: #fb8500;
+		
+		border-radius: 15px;
+   width: 200px;
 	text-align: center;
 	font-family: Rubik;
 	font-style: normal;
@@ -27,8 +29,9 @@
 	line-height: 1.5;
 	
 		&:hover {
-			color: #fb8500;
 			
+			background-color: #fff;
+			border: 1px solid #fb8500;
 		
 		}
 	&:not(:last-child) {

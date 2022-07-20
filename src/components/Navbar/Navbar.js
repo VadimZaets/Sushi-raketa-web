@@ -11,6 +11,7 @@ const navigation = [
   { id: 1, title: "Роли", path: "/menu/rolls" },
   { id: 2, title: "Сети", path: "/menu/sets" },
   { id: 3, title: "Піца", path: "/menu/pizza" },
+  { id: 4, title: "Бургери", path: "/menu/burger" },
 ];
 
 const Navbar = () => {
@@ -61,7 +62,7 @@ const Navbar = () => {
             <BiShoppingBag />
           </a>
         </Link>
-        <Link href="">
+        <Link href="/login">
           <a className={styles.singin}>
             <CgProfile className={styles.singin_img} />
             Увійти
