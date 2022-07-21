@@ -1,9 +1,9 @@
 import { Formik } from "formik";
 // import { authValidationSchema } from "../../utils/validation/AuthValid";
 import LabelForm from "../../components/_shared/LabelForm/LabelForm";
-import styles from "./sass/LoginView.module.scss";
+import styles from "./sass/RegisterView.module.scss";
 import Link from "next/link";
-const LoginView = () => {
+const RegisterView = () => {
   return (
     <div>
       <Formik
@@ -20,7 +20,7 @@ const LoginView = () => {
           isSubmitting,
         }) => (
           <div className={styles.wrapper}>
-            <h2 className={styles.authFormTitle}>Увійти</h2>
+            <h2 className={styles.authFormTitle}>Реєстрація</h2>
             <form onSubmit={handleSubmit} className={styles.authFormInput}>
               <LabelForm
                 type="email"
@@ -36,16 +36,20 @@ const LoginView = () => {
                 handleBlur={handleBlur}
                 values={values}
               />
-              <Link href="/forgotpassword">
-                <a className={styles.forgotPass}>Забули пароль?</a>
-              </Link>
+
+              <LabelForm
+                type="password"
+                placeholder="Повторіть пароль"
+                handleChange={handleChange}
+                handleBlur={handleBlur}
+                values={values}
+              />
 
               <button type="button" className={styles.btn}>
-                Увійти
+                Зареєструватись
               </button>
-
-              <Link href="/registration">
-                <a className={styles.btn}>Реєстрація</a>
+              <Link href="/login">
+                <a className={styles.login}>Повернутись до входу</a>
               </Link>
             </form>
           </div>
@@ -55,4 +59,4 @@ const LoginView = () => {
   );
 };
 
-export default LoginView;
+export default RegisterView;

@@ -5,7 +5,7 @@ import Layout from "../../layout/layout";
 const product = [
   {
     id: 1,
-    img: "philadelphia.png",
+    img: "/philadelphia.png",
     weight: "1000",
     number: "32",
     title: "Роли",
@@ -16,7 +16,7 @@ const product = [
   },
   {
     id: 2,
-    img: "philadelphia.png",
+    img: "/philadelphia.png",
     weight: "1000",
     number: "32",
     title: "Роли",
